@@ -1,0 +1,61 @@
+/* miniprogram/pages/birthday/birthday.wxss */
+page{
+  height:100%;
+}
+.libra{
+  width: 50rpx;
+  height:50rpx;
+  animation: downn 4s linear infinite;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes downn{
+  0% {
+    top:0%;
+    left:0px;
+    transform: rotateZ(0deg);
+  }
+  100% {
+    top:100%;
+    left:180px;
+    transform: rotateZ(360deg);
+  }
+}
+#puzzle{
+  width: 750rpx;
+  height: 750rpx;
+  border: 2rpx solid black;
+}
+
+.puzzlePiece{
+  width: 248rpx;
+  height: 248rpx;
+  margin: 1rpx;
+  position: absolute;
+}
+
+.HB{
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+  top: 300rpx;
+  left: 300rpx;
+  z-index: 20;
+}
+
+.up{
+  position: absolute;
+  top: 20rpx;
+  left: 325rpx;
+  width: 100rpx;
+  height: 50rpx;
+}
+
+.down{
+  position: absolute;
+  bottom: 20rpx;
+  left: 325rpx;
+  width: 100rpx;
+  height: 50rpx;
+}

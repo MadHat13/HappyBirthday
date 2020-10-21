@@ -1,0 +1,9 @@
+<view style="height:100%">
+  <swiper indicator-active-color="#157658"
+          vertical
+          interval="2000" style="height:100%">
+            <swiper-item wx:for="{{test}}" wx:key="aaa" class="test">
+              {{item}}
+            </swiper-item>
+  </swiper>
+</view>

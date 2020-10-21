@@ -1,0 +1,8 @@
+<!--miniprogram/pages/index.wxml-->
+<view class="index" style="background:url('https://7365-sekiro-9b60a7-1258913617.tcb.qcloud.la/bg.jpg?sign=4059815bad63bc6dbcf8948cb4be1b01&t=1603121427')">
+  <image src="{{bgmUrl}}" class="bgmPlay" bindtap="audioPause" wx:if="{{bgmStatus}}" style="{{StopPosition}}"></image>
+  <image src="{{bgmUrl}}" class="bgmStop" bindtap="audioPlay" wx:if="{{!bgmStatus}}" style="{{StopPosition}}"></image>
+
+  <input type="text" placeholder="小寿星,输入你的姓名" placeholder-class="index-name-placeholder" class="index-name" value="{{name}}" bindinput="inputName"></input>
+  <button bindtap="submitName" class="index-btn">进去看看</button>
+</view>

@@ -1,0 +1,29 @@
+<!--miniprogram/pages/birthday/birthday.wxml-->
+<swiper indicator-active-color="#157658"
+        vertical
+        current="{{pageNum}}"
+        easing-function='easeInOutCubic'
+        interval="2000" style="height:100%;background:url('https://7365-sekiro-9b60a7-1258913617.tcb.qcloud.la/bg.jpg?sign=4059815bad63bc6dbcf8948cb4be1b01&t=1603121427');">
+        <swiper-item>
+          <image src="../../images/down.png" class="down" bindtap="down"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="../../images/up.png" class="up" bindtap="up"></image>
+          <image src="../../images/down.png" class="down" bindtap="down"></image>
+        </swiper-item>
+        <swiper-item>
+          <view style="height:100%;">
+            <image src="../../images/libra.png" alt="" class="libra"/>
+
+            <!-- <canvas type="2d" id="myCanvas"></canvas> -->
+            <view id="puzzle" style="z-index:1;">
+              <image wx:if="{{complete}}" wx:for="{{puzzle}}" src="{{imgTest}}{{item.id+1}}.jpg" class="puzzlePiece" wx:key="index" catchtouchmove="move" catchtouchend="test1" id ="{{index}}" bindtouchstart="test" style="z-index:{{item.zindex}};left:{{item.left}}rpx;top:{{item.top}}rpx;"></image>
+              <image wx:if="{{!complete}}" src="{{imgPuzzle}}puzzle.jpg" style="z-index:10;top:0;left:0;position:absolute;width:750rpx;height:750rpx;"></image>
+              <image wx:if="{{!complete}}" src="../../images/{{audio}}.png" class="HB" bindtap="audio"></image>
+            </view>
+            <button bindtap="Next" wx:if="{{!complete}}">Next</button>
+          </view>
+        </swiper-item>
+          
+</swiper>
+

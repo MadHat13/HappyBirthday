@@ -1,0 +1,56 @@
+/* miniprogram/pages/index.wxss */
+page,body,html{
+  height:100%
+}
+.index{
+  height: 100%;
+} 
+.index-name{
+  width: 100%;
+  margin-top: 50%;
+  border: 2rpx solid #000000;
+  text-align: center;
+  /* border-radius: 20%; */
+  height: 80rpx;
+  color: #FFFFFF;
+}
+.index-name-placeholder{
+  text-align: center;
+}
+.index-btn{
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 60rpx;
+}
+.bgmPlay{
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 50rpx;
+  animation: music-rotate 4s linear infinite;
+}
+.bgmStop{
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 50rpx;
+  -webkit-animation-iteration-count: infinite;
+}
+.bgmPlay {
+  position: absolute;
+  z-index: 99;
+  -webkit-animation-iteration-count: infinite;
+}
+/* 旋转动画 */
+@keyframes music-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
